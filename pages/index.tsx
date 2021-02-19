@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import Head from 'next/head';
+import { documentToHtmlString } from "@contentful/rich-text-html-renderer";
 
 const client = require('contentful').createClient({
   space: process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID,
@@ -11,8 +12,12 @@ export default function Home() {
 
   async function fetchEntries() {
     const entries = await client.getEntries();
-    console.log(entries);
-    if (entries.items) return entries.items;
+    if (entries.items) {
+      return entries.items.map((item) => ({
+        title: item.fields.title,
+        content: documentToHtmlString(item.fields.content),
+      }));
+    }
   }
 
   useEffect(() => {
@@ -33,7 +38,7 @@ export default function Home() {
         && posts.map((post) => (
           <div key={post.title}>
             <h2>{post.title}</h2>
-            <p>{post.content}</p>
+            {post.content}
           </div>
         ))
       }
