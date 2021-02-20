@@ -5,7 +5,7 @@ export default function App({ Component, pageProps }) {
   return (
     <>
       <Head>
-        <title>TLHFCKOCTBCR</title>
+        <title>The Scout Law</title>
       </Head>
       <Component {...pageProps} />
     </>

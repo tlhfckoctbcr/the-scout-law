@@ -32,6 +32,16 @@ export default function Home() {
   return (
     <div className="container mx-auto py-8">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div>
+          {!!posts.length
+            && posts.map((post) => (
+              <div key={post.title}>
+                <h2>{post.title}</h2>
+                {post.content}
+              </div>
+            ))
+          }
+        </div>
         <div className="flex justify-center">
           <Image
             src="/images/bsa-norman-rockwell.jpg"
@@ -40,14 +50,6 @@ export default function Home() {
             height={750}
           />
         </div>
-        {!!posts.length
-          && posts.map((post) => (
-            <div key={post.title}>
-              <h2>{post.title}</h2>
-              {post.content}
-            </div>
-          ))
-        }
       </div>
     </div>
   )
