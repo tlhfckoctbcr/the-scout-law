@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import Head from 'next/head';
+import Image from "next/image";
 import { documentToHtmlString } from "@contentful/rich-text-html-renderer";
 
 const client = require('contentful').createClient({
@@ -30,18 +30,23 @@ export default function Home() {
   }, []);
 
   return (
-    <>
-      <Head>
-        <title>Next.js + Contentful</title>
-      </Head>
-      {!!posts.length
-        && posts.map((post) => (
-          <div key={post.title}>
-            <h2>{post.title}</h2>
-            {post.content}
-          </div>
-        ))
-      }
-    </>
+    <div className="container mx-auto py-8">
+      <div className="grid grid-cols-2 gap-4">
+        <Image
+          src="/images/bsa-norman-rockwell.jpg"
+          className="rounded-full"
+          width={500}
+          height={750}
+        />
+        {!!posts.length
+          && posts.map((post) => (
+            <div key={post.title}>
+              <h2>{post.title}</h2>
+              {post.content}
+            </div>
+          ))
+        }
+      </div>
+    </div>
   )
 }
