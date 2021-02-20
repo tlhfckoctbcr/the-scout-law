@@ -53,25 +53,27 @@ const laws = [
 
 export default function Home() {
   return (
-    <div className="container mx-auto">
-      <div className="grid grid-cols-1 gap-8 divide-gray-200 py-8">
-        <h1 className="flex justify-center">The Scout Law</h1>
-        <div className="flex justify-center px-4">
-          <Image
-            src="/images/bsa-norman-rockwell.jpg"
-            className="rounded-full"
-            width={500}
-            height={750}
-          />
-        </div>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 p-8">
-          {laws.map(({ law, explanation }) => (
-            <span key={law}>
-              <h2>{law.toUpperCase()}</h2>
-              <p>{explanation}</p>
-              <br />
-            </span>
-          ))}
+    <div className="bg-gray-100">
+      <div className="container mx-auto">
+        <div className="grid grid-cols-1 gap-8 divide-gray-200 py-8">
+          <h1 className="flex justify-center">The Scout Law</h1>
+          <div className="flex justify-center px-4">
+            <Image
+              src="/images/bsa-norman-rockwell.jpg"
+              className="rounded-full"
+              width={500}
+              height={750}
+            />
+          </div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 p-8">
+            {laws.map(({ law, explanation }) => (
+              <span key={law}>
+                <h2>{law.toUpperCase()}</h2>
+                <p>{explanation}</p>
+                <br />
+              </span>
+            ))}
+          </div>
         </div>
       </div>
     </div>
