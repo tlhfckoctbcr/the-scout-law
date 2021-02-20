@@ -14,8 +14,7 @@
         font-family: 'Fondamento';
         @apply text-3xl;
     }
-}
-
-p {
-    font-family: 'Raleway';
+    p {
+        font-family: 'Raleway';
+    }
 }
