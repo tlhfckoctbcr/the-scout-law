@@ -3,7 +3,7 @@ import '../styles/globals.css';
 
 export default function App({ Component, pageProps }) {
   return (
-    <div className="max-h-screen">
+    <div className="bg-gray-100">
       <Head>
         <title>The Scout Law</title>
       </Head>

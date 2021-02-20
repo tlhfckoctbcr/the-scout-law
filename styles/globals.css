@@ -8,7 +8,11 @@
 @layer base {
     h1 {
         font-family: 'Fondamento';
-        @apply text-2xl;
+        @apply text-6xl;
+    }
+    h2 {
+        font-family: 'Fondamento';
+        @apply text-3xl;
     }
 }
 
