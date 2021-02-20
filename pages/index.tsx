@@ -63,7 +63,7 @@ export default function Home() {
             height={750}
           />
         </div>
-        <div className="overflow-auto px-2">
+        <div className="overflow-auto px-8">
           {laws.map(({ law, explanation }) => (
             <span key={law}>
               <h1>{law.toUpperCase()}</h1>
