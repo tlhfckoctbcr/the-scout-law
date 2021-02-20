@@ -54,8 +54,8 @@ const laws = [
 export default function Home() {
   return (
     <div className="container mx-auto">
-      <div className="grid grid-cols-1 gap-4 py-8">
-        <div className="flex justify-center">
+      <div className="grid grid-cols-1 gap-8 divide-y divide-gray-200 py-8">
+        <div className="flex justify-center px-4">
           <Image
             src="/images/bsa-norman-rockwell.jpg"
             className="rounded-full"
@@ -63,7 +63,7 @@ export default function Home() {
             height={750}
           />
         </div>
-        <div className="overflow-auto px-8">
+        <div className="p-8">
           {laws.map(({ law, explanation }) => (
             <span key={law}>
               <h1>{law.toUpperCase()}</h1>
