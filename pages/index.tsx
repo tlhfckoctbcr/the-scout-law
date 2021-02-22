@@ -46,7 +46,7 @@ const laws = [
   {
     law: 'Reverent',
     explanation: 'A Scout is reverent toward God. He is faithful in his religious duties. He respects the beliefs of others.',
-  }
+  },
 ];
 
 export default function Home() {
@@ -62,6 +62,7 @@ export default function Home() {
                 className="rounded-3xl shadow-lg"
                 width={500}
                 height={750}
+                alt="Boy Scouts of America - Norman Rockwell Painting"
               />
             </div>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 p-8">
@@ -77,5 +78,5 @@ export default function Home() {
         </div>
       </div>
     </div>
-  )
+  );
 }
