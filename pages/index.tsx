@@ -1,12 +1,6 @@
-import { useEffect } from 'react';
-import ReactGA from 'react-ga';
 import laws from '../laws';
 
 export default function Home() {
-  useEffect(() => {
-    ReactGA.initialize('UA-190257727-1');
-  }, []);
-
   return (
     <div className="bg-splash bg-cover bg-center">
       <div className="bg-white bg-opacity-90">
